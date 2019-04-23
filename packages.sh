@@ -41,16 +41,13 @@ export PKG=(
   xclip
   zathura-pdf-mupdf
   zeal
-)
-
-export AUR=(
   betterlockscreen
   # copyq #
   direnv
   franz
-  # google-chrome #
+  firefox
   insect
-  # mailspring #
+  mailspring
   neovim
   # pokemon-terminal-git #
   polybar
