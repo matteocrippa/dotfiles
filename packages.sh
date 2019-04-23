@@ -1,21 +1,21 @@
 #!/bin/bash
 
 export PKG=(
-  # acpi #
-  # bat #
+  acpi
+  bat
   catdoc
   ctags
-  # curl #
+  curl
   diff-so-fancy
   diffpdf
   # dunst #
   # exa #
   feh
   figlet
-  # htop #
+  htop
   # hyperfine #
   # libreoffice-still #
-  lighttpd
+  # lighttpd #
   lolcat
   # lxappearance #
   # mupdf #
@@ -38,7 +38,7 @@ export PKG=(
   wget
   wmctrl
   xcape
-  # xclip #
+  xclip
   zathura-pdf-mupdf
   zeal
 )
@@ -48,7 +48,7 @@ export AUR=(
   # copyq #
   direnv
   franz
-  google-chrome
+  # google-chrome #
   insect
   # mailspring #
   neovim
@@ -58,7 +58,7 @@ export AUR=(
   sc-im
   screenkey
   slack-desktop
-  spotify
+  # spotify 
   # trello #
   watchexec
   z-dir-jump-git
