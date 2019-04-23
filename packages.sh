@@ -42,7 +42,7 @@ export PKG=(
   zathura-pdf-mupdf
   zeal
   betterlockscreen
-  # copyq #
+  clipit
   direnv
   franz
   firefox
