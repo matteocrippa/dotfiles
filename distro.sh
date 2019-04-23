@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PKGMN=pacman # Package Manager
+export PKGMN=yay # Package Manager
 export PKGOPT=(--needed --noconfirm)
 export PKGU=-Syu # Updating Options
 export PKGI=-Sy  # Installation Options
