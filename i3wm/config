@@ -165,7 +165,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # Workspace names
 set $ws1   "1:  Slack"
 set $ws2   "2:  Terminal"
-set $ws3   "3:  Chrome"
+set $ws3   "3:  Web"
 set $ws4   "4: "
 set $ws5   "5:  Terminal"
 set $ws6   "6:  IntelliJ"
@@ -212,7 +212,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
 assign [class="Slack"]           $ws1
-assign [class="Google-chrome"]   $ws3
+assign [class="Firefox"]   $ws3
 # assign [class="Trello"]          $ws4
 assign [class="jetbrains-idea"]  $ws6
 assign [class="code-oss"]        $ws8
@@ -442,7 +442,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
-# exec --no-startup-id copyq
 
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id xautolock -time 10 -locker betterlockscreen -l dim
