@@ -27,14 +27,14 @@ mkfs.ext4 /dev/mapper/ssd_group-home
 echo_info "Mounting"
 
 # NvME
-mount /dev/mapper/foo_group-root /mnt
-swapon /dev/mapper/foo_group-swap
+mount /dev/mapper/nvme_group-root /mnt
+swapon /dev/mapper/nvme_group-swap
 mkdir /mnt/boot
 mount ${NVME}1 /mnt/boot
 
 # SSD
 mkdir /mnt/home
-mount /dev/mapper/bar_group-home /mnt/home
+mount /dev/mapper/ssd_group-home /mnt/home
 
 pacstrap -i /mnt base base-devel
 genfstab -U /mnt > /mnt/etc/fstab
