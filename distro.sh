@@ -7,3 +7,4 @@ export PKGI=-Sy  # Installation Options
 export PKGR=-Rns # Remove Options
 export NVME=/dev/sda
 export SSD=/dev/sdb
+export SWAP=2G # size of swap
