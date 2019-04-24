@@ -26,7 +26,7 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $SSD
   y # confirm cleanup
   n # new partition
   1 # partition number 1
-    # default - start at beginning of disk 
+    # default - start at beginning of disk
     # 100 MB boot parttion
   8E00 # filesystem type
   w # write the partition table
@@ -39,7 +39,7 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
   y # confirm cleanup
   n # new partition
   1 # partition number 1
-    # default - start at beginning of disk 
+    # default - start at beginning of disk
   +256MB # 100 MB boot parttion
   EF00
   n # new partition
@@ -50,3 +50,6 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
   w # write the partition table
   y # confirm
 EOF
+
+# force reboot
+reboot

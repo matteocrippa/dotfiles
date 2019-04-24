@@ -20,6 +20,9 @@ git clone https://github.com/nelsonmestevao/spells   ~/.spells
 Then proceed with
 
 ```shell
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+chmod +x *.sh
 sudo pacman -Sy make
 sudo su 
 make gpt
@@ -28,6 +31,9 @@ make gpt
 System will autoreboot
 
 ```shell
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+chmod +x *.sh
 sudo pacman -Sy make
 sudo su
 make lvm
