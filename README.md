@@ -4,9 +4,11 @@ T480 Manjaro Setup
 
 On pre-install follow those steps, my T480 has 2 disk (NVME + SSD).
 
-- Partition NvME in 2 disk (256M EFI + LVM)
-- NvME LVM need to be split in 2 parts ( 32G Swap + Rest as ROOT)
-- SSD is LVM with 100% partition as HOME
+- Partition NvME in 2 disk (256M EFI fat + LVM)
+- NvME LVM need to be split in 2 parts ( 32G Swap + Rest as ROOT in ext4)
+- SSD is LVM with 100% partition as HOME (format ext4)
+- Install `intel-ucode`, `dialog` and `wpa_supplicant`
+
 
 ## Install
 
