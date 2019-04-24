@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. distro.sh
+
 echo "LVM"
 
 sudo cryptsetup luksFormat /dev/sda2
