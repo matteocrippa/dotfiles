@@ -17,3 +17,6 @@ echo_info "Installing core packages..."
 _install core
 
 _symlink
+
+echo_info "Force update all the system"
+sudo pacman -Syyu

@@ -1,6 +1,58 @@
 #!/bin/bash
 
 export PKG=(
+  unzip
+  unrar
+  p7zip
+  pulseaudio
+  cmus
+  alsa-utils
+  nitrogen
+  i3lock
+  adobe-source-code-pro-fonts
+  noto-fonts
+    firefox
+    code
+    gimp
+    libreoffice
+    pcmanfm
+    ranger
+    mupdf
+    radare2 binwalk bind-tools feh remmina
+    net-tools
+    nmap
+    wget
+    tcpdump
+    tcpreplay
+    wireshark-qt
+    deluge
+    rxvt-unicode-terminfo
+    fish
+    tmux
+    xf86-input-libinput
+    vim
+    git
+    tree
+    htop
+    python
+    go
+    python-pip
+    scrot
+    acpi
+    cloc
+    vlc
+    streamlink
+    dialog
+    wpa_supplicant
+    aircrack-ng
+    bspwm
+    sxhkd
+    dmenu
+    xorg-server
+    xorg-xinit
+    xorg-xrandr
+    xf86-video-intel
+  i3-gaps
   acpi
   bat
   catdoc
@@ -55,7 +107,7 @@ export PKG=(
   sc-im
   screenkey
   # slack-desktop #
-  # spotify 
+  # spotify
   # trello #
   watchexec
   z-dir-jump-git

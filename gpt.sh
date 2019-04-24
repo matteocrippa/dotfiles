@@ -1,8 +1,9 @@
 #!/bin/bash
 
 . distro.sh
+. helpers.sh
 
-echo "GPT"
+echo_info "GPT"
 
 # prepare nvme
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
@@ -50,6 +51,3 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
   w # write the partition table
   y # confirm
 EOF
-
-# force reboot
-# reboot
