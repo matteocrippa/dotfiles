@@ -27,7 +27,7 @@ make gpt
 
 System will autoreboot
 
-``shell
+```shell
 sudo pacman -Sy make
 sudo su
 make lvm
