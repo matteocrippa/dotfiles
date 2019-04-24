@@ -1,26 +1,12 @@
-[semaphoreci]: https://semaphoreci.com/nelsonmestevao/dotfiles
-[releases]: https://github.com/nelsonmestevao/dotfiles/releases/latest
+T480 Manjaro Setup
 
-<h1 align="center">
-  <img src="https://user-images.githubusercontent.com/19409687/54166758-980b4200-445e-11e9-8e81-f0cd7ba70fb5.png" alt="dotfiles" width="750px">
-</h1>
+## Pre install
 
-[![Build Status](https://semaphoreci.com/api/v1/nelsonmestevao/dotfiles/branches/master/badge.svg)][semaphoreci]
-[![Latest Release](https://img.shields.io/github/release-pre/nelsonmestevao/dotfiles.svg?style=flat-square)][releases]
+On pre-install follow those steps, my T480 has 2 disk (NVME + SSD).
 
-I really like to configure my system in every possible way. This repository
-holds how I do it. If you are just starting out you could use mine (_I don't
-care or mind_, see [LICENSE](#License)) but for your own sake **read them**.
-You will not get the most out of it without.
-
-Start by reading my Neovim configuration. It follows a literate configuration
-where it's documentation is the configuration files it selves. I write them
-using markdown and Neovim will interpret only the code blocks.
-
-<div align="center">
-  <img alt="screenshot" src="screenshot.png" width="85%"/>
-</div>
-
+- Partition NvME in 2 disk (256M EFI + LVM)
+- NvME LVM need to be split in 2 parts ( 32G Swap + Rest as ROOT)
+- SSD is LVM with 100% partition as HOME
 
 ## Install
 
