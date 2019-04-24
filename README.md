@@ -1,13 +1,10 @@
-T480 Manjaro Setup
+# T480 Manjaro/Archlinux
 
-## Pre install
-
-On pre-install follow those steps, my T480 has 2 disk (NVME + SSD).
-
-- Partition NvME in 2 disk (256M EFI fat + LVM)
-- NvME LVM need to be split in 2 parts ( 32G Swap + Rest as ROOT in ext4)
-- SSD is LVM with 100% partition as HOME (format ext4)
-- Install `intel-ucode`, `dialog` and `wpa_supplicant`
+## Setup
+- Lenovo T480
+- Crucial 32 GB
+- NVMe Toshiba RC 100 - 240G
+- SSD Crucial MX500
 
 
 ## Install
@@ -39,38 +36,13 @@ sudo su
 make lvm
 ```
 
-Once installation has finished and laptop reboot
+Once installation has finished and laptop rebooted:
 
 ```shell
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+git clone https://github.com/nelsonmestevao/spells   ~/.spells
 cd ~/.dotfiles
 chmod +x *.sh
-make install
-```
-
-
-
-
-
-
-I follow a very modular approach. If you don't want something you can just
-remove it's folder. Imagine you don't want Neovim. You can just delete `nvim`
-folder. It's that simple.
-
-
-Start by cloning my `dotfiles` into `~/.dotfiles`. You should do the same with
-my `spells` repository. Some scripts needed are there.
-
-```shell
-git clone https://github.com/nelsonmestevao/dotfiles ~/.dotfiles
-git clone https://github.com/nelsonmestevao/spells   ~/.spells
-```
-
-Depending on your Linux distribution you should change the `distro.sh`
-accordingly.
-
-```shell
-cd ~/.dotfiles
 make install
 ```
 
