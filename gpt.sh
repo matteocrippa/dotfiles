@@ -1,7 +1,6 @@
 #!/bin/bash
 
-NVME=/dev/sda
-SSD=/dev/sdb
+. distro.sh
 
 echo "GPT"
 
@@ -51,20 +50,3 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
   w # write the partition table
   y # confirm
 EOF
-
-echo "LVM"
-
-sudo cryptsetup luksFormat /dev/sda2
-sudo cryptsetup open --type luks /dev/sda2 foo
-sudo pvcreate /dev/mapper/foo
-sudo vgcreate foo_group /dev/mapper/foo
-sudo lvcreate -L32G  foo_group -n swap
-sudo lvcreate -l 100%FREE foo_group -n root
-
-sudo cryptsetup luksFormat /dev/sdb1
-sudo cryptsetup open --type luks /dev/sdb1 bar
-sudo pvcreate /dev/mapper/bar
-sudo vgcreate bar_group /dev/mapper/bar
-sudo lvcreate -l 100%FREE bar_group -n home
-
-echo "Formatting"
