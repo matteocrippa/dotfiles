@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Formatting"
+echo "GPT"
 
 # format disk nvme for swap and root
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk /dev/sda
@@ -47,3 +47,5 @@ sudo cryptsetup open --type luks /dev/sdb1 bar
 sudo pvcreate /dev/mapper/bar
 sudo vgcreate bar_group /dev/mapper/bar
 sudo lvcreate -l 100%FREE bar_group -n home
+
+echo "Formatting"
