@@ -10,22 +10,15 @@
 ## Install
 
 ```jshelllanguage
-git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-git clone https://github.com/nelsonmestevao/spells   ~/.spells
-```
-
-Then proceed with
-
-```jshelllanguage
+sudo pacman -Sy make git
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 chmod +x *.sh
-sudo pacman -Sy make git
 make gpt
 make lvm
 ```
 
-Then proceed with
+Then proceed with:
 
 ```jshelllanguage
 vi /etc/locale.gen # uncomment en_US.UTF-8 UTF-8
