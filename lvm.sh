@@ -22,7 +22,7 @@ lvcreate -l 100%FREE bar_group -n home
 echo "Formatting"
 
 # NvME
-mkfs.fat ${NVME}2
+mkfs.fat ${NVME}1
 mkfs.ext4 /dev/mapper/foo_group-root
 mkswap /dev/mapper/foo_group-swap
 
@@ -35,7 +35,7 @@ echo "Mounting"
 mount /dev/mapper/foo_group-root /mnt
 swapon /dev/mapper/foo_group-swap
 mkdir /mnt/boot
-mount /dev/${NVME}1 /mnt/boot
+mount ${NVME}1 /mnt/boot
 
 # SSD
 mkdir /mnt/home
