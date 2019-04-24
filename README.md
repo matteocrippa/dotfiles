@@ -39,6 +39,15 @@ sudo su
 make lvm
 ```
 
+Once installation has finished and laptop reboot
+
+```shell
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+chmod +x *.sh
+make install
+```
+
 
 
 
