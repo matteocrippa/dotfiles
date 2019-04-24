@@ -37,11 +37,15 @@ function _install() {
       fi
       echo_done "${pkg} installed!"
     done
-  elif [[ $1 == "aur" ]]; then
-    for aur in "${AUR[@]}"; do
-      echo_info "Installing ${aur}..."
-      yaourt -Sy "$aur" --needed --noconfirm
-      echo_done "${aur} installed!"
+  elif [[ $1 == "lenovo" ]]; then
+    for lenovo in "${LENOVO[@]}"; do
+      echo_info "Installing ${lenovo}..."
+      if ! [ -x "$(command -v rainbow)" ]; then
+        sudo "$PKGMN" "$PKGI" "$lenovo" "${PKGOPT[@]}"
+      else
+        rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
+      fi
+      echo_done "${lenovo} installed!"
     done
   else
     echo_info "Intalling ${1}..."
