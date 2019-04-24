@@ -28,3 +28,15 @@ mkswap /dev/mapper/foo_group-swap
 
 # SSD
 mkfs.ext4 /dev/mapper/bar_group-home
+
+echo "Mounting"
+
+# NvME
+mount /dev/mapper/foo_group-root /mnt
+swapon /dev/mapper/foo_group-swap
+mkdir /mnt/boot
+mount /dev/${NVME}1 /mnt/boot
+
+# SSD
+mkdir /mnt/home
+mount /dev/mapper/bar_group-home /mnt/home
