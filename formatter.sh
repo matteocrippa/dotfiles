@@ -10,13 +10,12 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk /dev/sda
   +256MB # 100 MB boot parttion
   EF00
   n # new partition
-  p # primary partition
   2 # partion number 2
     # default, start immediately after preceding partition
     # default, extend partition to end of disk
   8E00 # make a partition bootable
   w # write the partition table
-  q # and we're done
+  y # confirm
 EOF
 
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk /dev/sdb
@@ -28,5 +27,5 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk /dev/sdb
     # 100 MB boot parttion
   8E00
   w # write the partition table
-  q # and we're done
+  y # confirm
 EOF
