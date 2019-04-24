@@ -8,7 +8,7 @@ export PKG=(
   curl
   diff-so-fancy
   diffpdf
-  # dunst #
+  dunst
   # exa #
   feh
   figlet
@@ -54,9 +54,18 @@ export PKG=(
   rainbow
   sc-im
   screenkey
-  slack-desktop
+  # slack-desktop #
   # spotify 
   # trello #
   watchexec
   z-dir-jump-git
+  android-studio
+)
+
+export LENOVO=(
+  intel-ucode
+  dialog
+  wpa_supplicant
+  lenovo-throttling-fix-git
+  xf86-input-libinput
 )
