@@ -60,6 +60,7 @@ export PKG=(
   watchexec
   z-dir-jump-git
   android-studio
+  intellij-idea-ultimate-edition
 )
 
 export LENOVO=(
