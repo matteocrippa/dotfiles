@@ -40,3 +40,6 @@ mount /dev/${NVME}1 /mnt/boot
 # SSD
 mkdir /mnt/home
 mount /dev/mapper/bar_group-home /mnt/home
+
+# Setup
+setup
