@@ -34,6 +34,7 @@ chmod +x *.sh
 sudo pacman -Sy make
 sudo su
 make lvm
+setup
 ```
 
 Once installation has finished and laptop rebooted:
