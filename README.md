@@ -12,6 +12,32 @@ On pre-install follow those steps, my T480 has 2 disk (NVME + SSD).
 
 ## Install
 
+```shell
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+git clone https://github.com/nelsonmestevao/spells   ~/.spells
+```
+
+Then proceed with
+
+```shell
+sudo pacman -Sy make
+sudo su 
+make gpt
+```
+
+System will autoreboot
+
+``shell
+sudo pacman -Sy make
+sudo su
+make lvm
+```
+
+
+
+
+
+
 I follow a very modular approach. If you don't want something you can just
 remove it's folder. Imagine you don't want Neovim. You can just delete `nvim`
 folder. It's that simple.
