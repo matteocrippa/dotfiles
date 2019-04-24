@@ -32,14 +32,14 @@ mkfs.ext4 /dev/mapper/bar_group-home
 echo "Mounting"
 
 # NvME
-mount /dev/mapper/foo_group-root /mnt
+# mount /dev/mapper/foo_group-root /mnt
 swapon /dev/mapper/foo_group-swap
 mkdir /mnt/boot
 mount ${NVME}1 /mnt/boot
 
 # SSD
-mkdir /mnt/home
-mount /dev/mapper/bar_group-home /mnt/home
+# mkdir /mnt/home
+# mount /dev/mapper/bar_group-home /mnt/home
 
 # Setup
 setup
