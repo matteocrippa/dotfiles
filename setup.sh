@@ -66,8 +66,9 @@ mkswap /dev/mapper/nvme_group-swap
 
 # SSD
 echo_info "LVM + Formatting SSD"
-cryptsetup luksFormat ${SSD}1
-cryptsetup open --type luks ${SSD}1 ssd
+dd if=/dev/urandom of=keyfile bs=1024 count=20
+cryptsetup --key-file keyfile luksFormat ${SSD}1
+cryptsetup --key-file keyfile luksOpen ${SSD}1 ssd
 pvcreate /dev/mapper/ssd
 vgcreate ssd_group /dev/mapper/ssd
 lvcreate -l 100%FREE ssd_group -n home
@@ -86,6 +87,11 @@ echo_info "> Mounted NVMe"
 mkdir /mnt/home
 mount /dev/mapper/ssd_group-home /mnt/home
 echo_info "> Mounted SSD"
+
+echo_info "Setup keyfile decrypt"
+cp keyfile /mnt/root
+export PART_ID=$(blkid -o value -s UUID ${SSD}1)
+echo "crypt_hdd UUID=${PART_ID} /root/keyfile luks"
 
 # System
 echo_info "Preparing system"
