@@ -1,12 +1,9 @@
 
-.PHONY: install uninstall fmt test gpt lvm
+.PHONY: install uninstall fmt test setup
 
-gpt:
-	@./gpt.sh
-	
-lvm:
-	@./lvm.sh
-	
+setup:
+	@./setup.sh
+
 install:
 	@./install.sh
 

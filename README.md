@@ -14,8 +14,7 @@ sudo pacman -Sy make git
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 chmod +x *.sh
-make gpt
-make lvm
+make setup
 ```
 
 Then proceed with:
