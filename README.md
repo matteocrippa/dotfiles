@@ -25,6 +25,9 @@ cd /tmp
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 cd dotfiles
 make chroot
+exit
+umount -R /mnt
+reboot
 ```
 
 On restart proceed with
