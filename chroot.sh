@@ -41,7 +41,7 @@ echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
 export PART_ID=$(blkid -o value -s UUID ${NVME}2)
-echo "options cryptdevice=UUID=${PART_ID}:cryptlvm root=/dev/mapper/nvme_group-root quiet rw" >> /boot/loader/entries/arch.conf
+echo "options cryptdevice=UUID=${PART_ID}:nvme_group root=/dev/mapper/nvme_group-root quiet rw" >> /boot/loader/entries/arch.conf
 
 echo_info "Prepare reboot"
 exit
