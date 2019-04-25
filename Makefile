@@ -5,7 +5,7 @@ setup:
 	@./setup.sh
 
 chroot:
-        @./chroot.sh
+	@./chroot.sh
 
 install:
 	@./install.sh
