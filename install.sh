@@ -7,6 +7,9 @@
 echo_info "Get spells"
 git clone https://github.com/matteocrippa/spells  ~/.spells
 
+echo_info "Install Yay"
+pacman -Sy yay
+
 echo_info "Installing lenovo packages..."
 _install lenovo
 sudo systemctl enable lenovo_fix
