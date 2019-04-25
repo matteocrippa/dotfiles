@@ -11,10 +11,20 @@
 
 ```jshelllanguage
 sudo pacman -Sy make git
+cd /tmp
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-chmod +x *.sh
+cd dotfiles
 make setup
+```
+
+Once the prompt is finished, you are _chrooted_ in your env, so proceed with:
+
+```jshelllanguage
+sudo pacman -Sy make git
+cd /tmp
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+cd dotfiles
+make chroot
 ```
 
 Then proceed with:
