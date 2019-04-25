@@ -1,4 +1,4 @@
-# T480 Manjaro/Archlinux
+# T480 Manjaro
 
 ## Setup
 - Lenovo T480
@@ -10,12 +10,19 @@
 ## Install
 
 ```jshelllanguage
-sudo pacman -Sy make git
-cd /tmp
-git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+git clone https://github.com/matteocrippa/dotfiles
 cd dotfiles
-make setup
+sudo make setup
 ```
+
+Once ended exec `setup` and proceed with visual selecting:
+
+- mount partition (no format)
+- prepare pacman
+- install linux 5.0 + yay
+- install i3
+- install systemd-boot
+- fstab uefi
 
 Once the prompt is finished, you are _chrooted_ in your env, so proceed with:
 

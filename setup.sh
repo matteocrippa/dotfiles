@@ -75,3 +75,15 @@ sudo pvcreate /dev/mapper/ssd
 sudo vgcreate ssd_group /dev/mapper/ssd
 sudo lvcreate -l 100%FREE ssd_group -n home
 sudo mkfs.ext4 /dev/mapper/ssd_group-home
+
+echo_info "Mounting"
+
+## NvME
+mount /dev/mapper/nvme_group-root /mnt
+
+echo_info "Setup keyfile decrypt"
+cp keyfile /mnt
+export PART_ID=$(blkid -o value -s UUID ${SSD}1)
+echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab.new
+
+umount -R /mnt

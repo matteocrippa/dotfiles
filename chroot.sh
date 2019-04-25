@@ -3,13 +3,8 @@
 . distro.sh
 . helpers.sh
 
-echo_info "Setup keyfile decrypt"
-cp keyfile /mnt
-export PART_ID=$(blkid -o value -s UUID ${SSD}1)
-echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab
-
 echo_info "Bootloader"
-pacman -Sy intel-ucode
+pacman -Sy sed intel-ucode
 sed -i "s/HOOKS/#HOOKS/g" /etc/mkinitcpio.conf
 echo "HOOKS=(base udev autodetect keyboard keymap modconf block encrypt lvm2 filesystems fsck)" >> /etc/mkinitcpio.conf
 mkinitcpio -p linux
