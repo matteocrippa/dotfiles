@@ -10,7 +10,7 @@ git clone https://github.com/matteocrippa/spells  ~/.spells
 echo_info "Install Yay"
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
-sudo makepkg -si
+makepkg -si
 
 #echo_info "Installing lenovo packages..."
 #_install lenovo
