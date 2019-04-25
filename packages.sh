@@ -16,7 +16,7 @@ export PKG=(
 
   # drivers
   acpi
-
+  numlockx
   xf86-input-libinput
 
   # desktop
@@ -25,6 +25,7 @@ export PKG=(
   rofi
   dmenu
   dunst
+  betterlockscreen
 
   # utils
   unzip
@@ -38,6 +39,7 @@ export PKG=(
 
   # apps x
   firefox
+  clipit
 
   # system
   bind-tools
@@ -55,6 +57,8 @@ export PKG=(
   scrot
   bat
   neofetch
+  tldr
+  rainbow
 
   # coding
   python
@@ -70,41 +74,27 @@ export PKG=(
 # vlc
 #    sxhkd
 #    streamlink
+#  diff-so-fancy
+#  diffpdf
+#  redshift
+#  zeal
+# mailspring
+#  neovim
+# franz
+#  screenkey
 
 
 #  pulseaudio
 #  alsa-utils
 #  adobe-source-code-pro-fonts
 #  noto-fonts
-#  diff-so-fancy
-#  diffpdf
-#  lolcat
 
-#  numlockx
+
 #  odt2txt
 #  playerctl
 #  pulseaudio
 #  pulseaudio-bluetooth
-#  rclone
-#  redshift
-#  shfmt
-#  tldr
-#  wmctrl
-#  xcape
-#  xclip
 #  zathura-pdf-mupdf
-#  zeal
-#  betterlockscreen
-#  clipit
-#  direnv
-#  franz
-#  insect
-#  mailspring
-#  neovim
-#  rainbow
-#  sc-im
-#  screenkey
-#  watchexec
 #  z-dir-jump-git
 #  android-studio
 #  intellij-idea-ultimate-edition
@@ -114,6 +104,8 @@ export PKG=(
 #  kitematic
 #  enpass-bin
 #  grive
+#  rclone
+
 #
 #  evernote
 #  gitahead
