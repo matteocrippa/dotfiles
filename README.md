@@ -25,6 +25,7 @@ cd /tmp
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 cd dotfiles
 make chroot
+mv /keyfile /root/keyfile
 exit
 umount -R /mnt
 reboot
@@ -38,12 +39,6 @@ useradd -m -G wheel -s /bin/bash matteo
 passwd matteo
 visudo # uncomment wheel group
 exit # login as user
-```
-And after exit run
-
-Then proceed with:
-
-```shell
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 git clone https://github.com/nelsonmestevao/spells   ~/.spells
 cd ~/.dotfiles
