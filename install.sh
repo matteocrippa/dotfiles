@@ -8,7 +8,9 @@ echo_info "Get spells"
 git clone https://github.com/matteocrippa/spells  ~/.spells
 
 echo_info "Install Yay"
-sudo pacman -Sy yay
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+sudo makepkg -si
 
 echo_info "Installing lenovo packages..."
 _install lenovo
