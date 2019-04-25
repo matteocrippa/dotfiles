@@ -4,6 +4,9 @@
 . packages.sh
 . helpers.sh
 
+echo_info "Get spells"
+git clone https://github.com/matteocrippa/spells  ~/.spells
+
 echo_info "Installing lenovo packages..."
 _install lenovo
 sudo systemctl enable lenovo_fix

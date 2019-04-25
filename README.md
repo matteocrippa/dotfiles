@@ -40,7 +40,6 @@ passwd matteo
 visudo # uncomment wheel group
 exit # login as user
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-git clone https://github.com/nelsonmestevao/spells   ~/.spells
 cd ~/.dotfiles
 chmod +x *.sh
 make install
