@@ -116,9 +116,5 @@ export PKG=(
 )
 
 export LENOVO=(
-  intel-ucode
-  dialog
-  wpa_supplicant
   lenovo-throttling-fix-git
-  xf86-input-libinput
 )
