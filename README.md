@@ -10,6 +10,7 @@
 ## Install
 
 ```jshelllanguage
+sudo pacman -Sy git make
 git clone https://github.com/matteocrippa/dotfiles
 cd dotfiles
 sudo make setup
