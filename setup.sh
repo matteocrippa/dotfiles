@@ -80,58 +80,16 @@ mount /dev/mapper/nvme_group-root /mnt
 swapon /dev/mapper/nvme_group-swap
 mkdir /mnt/boot
 mount ${NVME}1 /mnt/boot
+echo_info "> Mounted NVMe"
 
 # SSD
 mkdir /mnt/home
 mount /dev/mapper/ssd_group-home /mnt/home
+echo_info "> Mounted SSD"
 
+# System
 echo_info "Preparing system"
 
 pacstrap -i /mnt base base-devel
 genfstab -U /mnt > /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
-
-echo_info "Setup system"
-
-echo "en_US.UTF-8 UTF-8" >  /etc/locale.gen
-locale-gen
-rm /etc/localtime
-ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
-hwclock --systohc --utc
-echo "arch" > /etc/hostname
-
-read -p "Press any key to continue... " -n1 -s
-echo_info "Setup Root user"
-
-passwd
-
-echo_info "Setup pacman"
-
-echo "[multilib]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
-echo "Server = https://www.archlinux.org/mirrorlist/" >> /etc/pacman.d/mirrorlist
-pacman -Sy intel-ucode
-pacman -Syd dialog wpa_supplicant
-
-echo_info "Bootloader"
-
-sed -i "s/HOOKS/#HOOKS/g" /etc/mkinitcpio.conf
-echo "HOOKS=(base udev autodetect keyboard keymap modconf block encrypt lvm2 filesystems fsck)" >> /etc/mkinitcpio.conf
-
-read -p "Press any key to continue... " -n1 -s
-
-mkinitcpio -p linux
-bootctl --path=/boot install
-echo "default arch" > /boot/loader/loader.conf
-echo "editor 0" >> /boot/loader/loader.con
-echo "title Arch Linux" > /boot/loader/entries/arch.conf
-echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
-echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
-echo "initrd /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-export PART_ID=$(blkid -o value -s UUID /dev/mapper/nvme_group-root)
-echo "options cryptdevice=UUID=${PART_ID}:cryptlvm root=/dev/mapper/nvme_group-root quiet rw" >> /boot/loader/entries/arch.conf
-
-echo_info "Prepare reboot"
-exit
-umount -R /mnt
-reboot
