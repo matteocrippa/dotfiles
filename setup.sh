@@ -82,8 +82,5 @@ echo_info "Mounting"
 sudo mount /dev/mapper/nvme_group-root /mnt
 
 echo_info "Setup keyfile decrypt"
-cp keyfile /mnt
-export PART_ID=$(blkid -o value -s UUID ${SSD}1)
-sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab.new
-
+sudo -cp keyfile /mnt
 sudo umount -R /mnt

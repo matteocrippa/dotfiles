@@ -22,8 +22,21 @@ Once ended exec `setup` and proceed with visual selecting:
 - prepare pacman
 - install linux 5.0 + yay
 - install i3
+- install minimal
+- install video driver
 - install systemd-boot
 - fstab uefi
+
+Proceed chrooting and:
+
+```jshelllanguage
+cd /tmp
+git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
+cd dotfiles
+make chroot
+```
+
+
 
 Once the prompt is finished, you are _chrooted_ in your env, so proceed with:
 
