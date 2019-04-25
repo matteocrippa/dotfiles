@@ -3,32 +3,13 @@
 . distro.sh
 . helpers.sh
 
-echo_info "Setup system"
-
-echo "en_US.UTF-8 UTF-8" >  /etc/locale.gen
-locale-gen
-rm /etc/localtime
-ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
-hwclock --systohc --utc
-echo "arch" > /etc/hostname
-echo "127.0.0.1 localhost" >> /etc/hosts
-echo "::1 localhost" >> /etc/hosts
-echo "127.0.0.1 arch.localdomain arch" >> /etc/hosts
-systemctl enable dhcpcd@enp3s0.service
-
-echo_info "Setup Root user"
-passwd
-
-echo_info "Setup pacman"
-pacman -Sy reflector
-reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist
-echo "[multilib]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
-echo "Server = https://www.archlinux.org/mirrorlist/" >> /etc/pacman.d/mirrorlist
+echo_info "Setup keyfile decrypt"
+cp keyfile /mnt
+export PART_ID=$(blkid -o value -s UUID ${SSD}1)
+echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab
 
 echo_info "Bootloader"
 pacman -Sy intel-ucode
-pacman -Syd dialog wpa_supplicant
 sed -i "s/HOOKS/#HOOKS/g" /etc/mkinitcpio.conf
 echo "HOOKS=(base udev autodetect keyboard keymap modconf block encrypt lvm2 filesystems fsck)" >> /etc/mkinitcpio.conf
 mkinitcpio -p linux
