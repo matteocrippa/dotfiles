@@ -89,7 +89,7 @@ mount /dev/mapper/ssd_group-home /mnt/home
 echo_info "> Mounted SSD"
 
 echo_info "Setup keyfile decrypt"
-cp keyfile /mnt/root/
+cp keyfile /mnt
 export PART_ID=$(blkid -o value -s UUID ${SSD}1)
 echo "crypt_hdd UUID=${PART_ID} /root/keyfile luks"
 
