@@ -13,7 +13,7 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $NVME
   y # confirm
 EOF
 
-# prepare nvme
+# prepare ssd
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | sudo gdisk $SSD
   x # expert mode
   z # wipe disk
@@ -54,48 +54,48 @@ EOF
 
 # NvMe
 echo_info "LVM + Formatting NVMe"
-cryptsetup luksFormat ${NVME}2
-cryptsetup open --type luks ${NVME}2 nvme
-pvcreate /dev/mapper/nvme
-vgcreate nvme_group /dev/mapper/nvme
-lvcreate -L${SWAP} nvme_group -n swap
-lvcreate -l 100%FREE nvme_group -n root
-mkfs.fat ${NVME}1
-mkfs.ext4 /dev/mapper/nvme_group-root
-mkswap /dev/mapper/nvme_group-swap
+sudo cryptsetup luksFormat ${NVME}2
+sudo cryptsetup open --type luks ${NVME}2 nvme
+sudo pvcreate /dev/mapper/nvme
+sudo vgcreate nvme_group /dev/mapper/nvme
+sudo lvcreate -L${SWAP} nvme_group -n swap
+sudo lvcreate -l 100%FREE nvme_group -n root
+sudo mkfs.fat ${NVME}1
+sudo mkfs.ext4 /dev/mapper/nvme_group-root
+sudo mkswap /dev/mapper/nvme_group-swap
 
 # SSD
 echo_info "LVM + Formatting SSD"
-dd if=/dev/urandom of=keyfile bs=1024 count=20
-cryptsetup --key-file keyfile luksFormat ${SSD}1
-cryptsetup --key-file keyfile luksOpen ${SSD}1 ssd
-pvcreate /dev/mapper/ssd
-vgcreate ssd_group /dev/mapper/ssd
-lvcreate -l 100%FREE ssd_group -n home
-mkfs.ext4 /dev/mapper/ssd_group-home
+sudo dd if=/dev/urandom of=keyfile bs=1024 count=20
+sudo cryptsetup --key-file keyfile luksFormat ${SSD}1
+sudo cryptsetup --key-file keyfile luksOpen ${SSD}1 ssd
+sudo pvcreate /dev/mapper/ssd
+sudo vgcreate ssd_group /dev/mapper/ssd
+sudo lvcreate -l 100%FREE ssd_group -n home
+sudo mkfs.ext4 /dev/mapper/ssd_group-home
 
-echo_info "Mounting"
-
-# NvME
-mount /dev/mapper/nvme_group-root /mnt
-swapon /dev/mapper/nvme_group-swap
-mkdir /mnt/boot
-mount ${NVME}1 /mnt/boot
-echo_info "> Mounted NVMe"
-
-# SSD
-mkdir /mnt/home
-mount /dev/mapper/ssd_group-home /mnt/home
-echo_info "> Mounted SSD"
-
-echo_info "Setup keyfile decrypt"
-cp keyfile /mnt
-export PART_ID=$(blkid -o value -s UUID ${SSD}1)
-echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab
-
-# System
-echo_info "Preparing system"
-
-pacstrap -i /mnt base base-devel
-genfstab -U /mnt > /mnt/etc/fstab
-arch-chroot /mnt /bin/bash
+#echo_info "Mounting"
+#
+## NvME
+#mount /dev/mapper/nvme_group-root /mnt
+#swapon /dev/mapper/nvme_group-swap
+#mkdir /mnt/boot
+#mount ${NVME}1 /mnt/boot
+#echo_info "> Mounted NVMe"
+#
+## SSD
+#mkdir /mnt/home
+#mount /dev/mapper/ssd_group-home /mnt/home
+#echo_info "> Mounted SSD"
+#
+#echo_info "Setup keyfile decrypt"
+#cp keyfile /mnt
+#export PART_ID=$(blkid -o value -s UUID ${SSD}1)
+#echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab
+#
+## System
+#echo_info "Preparing system"
+#
+#pacstrap -i /mnt base base-devel
+#genfstab -U /mnt > /mnt/etc/fstab
+#arch-chroot /mnt /bin/bash
