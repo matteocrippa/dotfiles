@@ -11,10 +11,11 @@ rm /etc/localtime
 ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
 hwclock --systohc --utc
 echo "arch" > /etc/hostname
+echo "127.0.0.1 localhost" >> /etc/hosts
+echo "::1 localhost" >> /etc/hosts
+echo "127.0.0.1 arch.localdomain arch" >> /etc/hosts
 
-read -p "Press any key to continue... " -n1 -s
 echo_info "Setup Root user"
-
 passwd
 
 echo_info "Setup pacman"
