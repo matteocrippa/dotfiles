@@ -79,8 +79,7 @@ sudo mkfs.ext4 /dev/mapper/ssd_group-home
 echo_info "Mounting"
 
 ## NvME
-sudo mount /dev/mapper/nvme_group-root /mnt
-
 echo_info "Setup keyfile decrypt"
-sudo -cp keyfile /mnt
+sudo mount /dev/mapper/nvme_group-root /mnt
+sudo cp keyfile /mnt
 sudo umount -R /mnt

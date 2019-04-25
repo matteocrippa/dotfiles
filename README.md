@@ -34,7 +34,11 @@ cd /tmp
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
 cd dotfiles
 make chroot
+exit
+reboot
 ```
+
+Continue now
 
 
 
