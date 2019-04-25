@@ -1,8 +1,11 @@
 
-.PHONY: install uninstall fmt test setup
+.PHONY: install uninstall fmt test setup chroot
 
 setup:
 	@./setup.sh
+
+chroot:
+        @./chroot.sh
 
 install:
 	@./install.sh
