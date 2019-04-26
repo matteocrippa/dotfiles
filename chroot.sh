@@ -4,6 +4,7 @@
 . helpers.sh
 
 echo_info "Prepare keyfile"
+sudo mv /keyfile /root/keyfile
 export PART_ID=$(blkid -o value -s UUID ${SSD}1)
 sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /etc/crypttab
 
@@ -15,5 +16,7 @@ echo "initrd /initramfs-5.1-x86_64.img" >> /boot/loader/entries/manjaro.conf
 export PART_ID=$(blkid -o value -s UUID ${NVME}2)
 echo "options cryptdevice=UUID=${PART_ID}:nvme_group root=/dev/mapper/nvme_group-root quiet rw" >> /boot/loader/entries/manjaro.conf
 
-echo_info "Edit /boot/loader/entries/arch.conf according proper files"
+echo "default manjaro" >> /boot/loader/loader.conf
+
+echo_info "Edit /boot/loader/loader.conf"
 exit
