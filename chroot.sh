@@ -8,7 +8,8 @@ export PART_ID=$(blkid -o value -s UUID ${SSD}1)
 sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /etc/crypttab
 
 echo_info "Bootloader"
-echo "title Arch Linux" > /boot/loader/entries/arch.conf
+touch /boot/loader/entries/arch.conf
+echo "title Arch Linux" >> /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-5.1-x86_64" >> /boot/loader/entries/arch.conf
 echo "initrd /intel-ucode.img" >> /boot/loader/entries/arch.conf
 echo "initrd /initramfs5.1-x86_64.img" >> /boot/loader/entries/arch.conf
