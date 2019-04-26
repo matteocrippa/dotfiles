@@ -19,6 +19,7 @@ sudo make setup
 Once ended exec `setup` and proceed with visual selecting:
 
 - mount partition (no format)
+- mount /boot 
 - prepare pacman
 - install linux 5.0 + yay
 - install i3
