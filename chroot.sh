@@ -9,7 +9,7 @@ sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /mnt/etc/crypttab
 
 echo_info "Bootloader"
 pacman -Sy sed intel-ucode
-echo "default arch" > /boot/efi/loader/loader.conf
+echo "default arch" >> /boot/efi/loader/loader.conf
 echo "editor 0" >> /boot/efi/loader/loader.con
 echo "title Arch Linux" > /boot/efi/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/efi/loader/entries/arch.conf
