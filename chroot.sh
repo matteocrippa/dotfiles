@@ -8,9 +8,7 @@ export PART_ID=$(blkid -o value -s UUID ${SSD}1)
 sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /etc/crypttab
 
 echo_info "Bootloader"
-mkdir /boot/loader
-mkdir /boot/loader/entries
-echo "default arch" > /boot/loader/loader.conf
+echo "default arch" >> /boot/loader/loader.conf
 echo "editor 0" >> /boot/loader/loader.conf
 echo "title Arch Linux" > /boot/loader/entries/arch.conf
 echo "linux /vmlinuz-linux" >> /boot/loader/entries/arch.conf
