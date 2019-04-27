@@ -48,6 +48,14 @@ export PKG=(
 #  kitematic
 #  enpass-bin
 # mailspring
+#  evernote
+#  gitahead
+#  charles
+#  clockify-desktop
+#  postman
+# vlc
+# wireshark-qt
+# franz
 
   # system
   bind-tools
@@ -78,36 +86,22 @@ export PKG=(
   go
   nodejs
 
-  # fonts
-#  adobe-source-code-pro-fonts
-#  noto-fonts
 
 #    pcmanfm
 #    mupdf
 #    remmina
-# wireshark-qt
-# vlc
 #    sxhkd
 #    streamlink
 #  diff-so-fancy
 #  diffpdf
 #  redshift
-#  zeal
+#  zeal-git
 #  neovim
-# franz
 #  screenkey
-
-
 #  odt2txt
 #  zathura-pdf-mupdf
 #  z-dir-jump-git
 
-
-#  evernote
-#  gitahead
-#  charles
-#  clockify
-#  postman
 )
 
 export LENOVO=(
