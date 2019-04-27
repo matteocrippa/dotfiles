@@ -36,10 +36,18 @@ export PKG=(
   ranger
   git
   feh
+  playerctl
 
   # apps x
   firefox
   clipit
+#  android-studio
+#  intellij-idea-ultimate-edition
+#  virtualbox
+#  docker-git
+#  kitematic
+#  enpass-bin
+# mailspring
 
   # system
   bind-tools
@@ -59,14 +67,21 @@ export PKG=(
   neofetch
   tldr
   rainbow
+  #pulseaudio
+  #  pulseaudio-bluetooth
+#  alsa-utils
+# grive
 
   # coding
   python
   python-pip
   go
+  nodejs
 
+  # fonts
+#  adobe-source-code-pro-fonts
+#  noto-fonts
 
-# TO REVIEW
 #    pcmanfm
 #    mupdf
 #    remmina
@@ -78,35 +93,16 @@ export PKG=(
 #  diffpdf
 #  redshift
 #  zeal
-# mailspring
 #  neovim
 # franz
 #  screenkey
 
 
-#  pulseaudio
-#  alsa-utils
-#  adobe-source-code-pro-fonts
-#  noto-fonts
-
-
 #  odt2txt
-#  playerctl
-#  pulseaudio
-#  pulseaudio-bluetooth
 #  zathura-pdf-mupdf
 #  z-dir-jump-git
-#  android-studio
-#  intellij-idea-ultimate-edition
-#
-#  virtualbox
-#  docker-git
-#  kitematic
-#  enpass-bin
-#  grive
-#  rclone
 
-#
+
 #  evernote
 #  gitahead
 #  charles
