@@ -37,6 +37,7 @@ export PKG=(
   git
   feh
   playerctl
+  neovim
 
   # apps x
   firefox
@@ -56,6 +57,7 @@ export PKG=(
 # vlc
 # wireshark-qt
 # franz
+# blueman
 
   # system
   bind-tools
@@ -75,10 +77,10 @@ export PKG=(
   neofetch
   tldr
   rainbow
-  #pulseaudio
-  #  pulseaudio-bluetooth
-#  alsa-utils
-# grive
+  pulseaudio
+  pulseaudio-bluetooth
+  alsa-utils
+  grive
 
   # coding
   python
@@ -96,8 +98,6 @@ export PKG=(
 #  diffpdf
 #  redshift
 #  zeal-git
-#  neovim
-#  screenkey
 #  odt2txt
 #  zathura-pdf-mupdf
 #  z-dir-jump-git
