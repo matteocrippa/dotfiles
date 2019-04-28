@@ -42,22 +42,23 @@ export PKG=(
   # apps x
   firefox
   clipit
-#  android-studio
-#  intellij-idea-ultimate-edition
-#  virtualbox
-#  docker-git
-#  kitematic
-#  enpass-bin
-# mailspring
-#  evernote
-#  gitahead
-#  charles
-#  clockify-desktop
-#  postman
-# vlc
-# wireshark-qt
-# franz
-# blueman
+  android-studio
+  intellij-idea-ultimate-edition
+  virtualbox
+  docker-git
+  kitematic
+  enpass-bin
+  mailspring
+  evernote
+  gitahead
+  charles
+  clockify-desktop
+  postman
+  vlc
+  wireshark-qt
+  franz
+  blueman
+  arandr
 
   # system
   bind-tools
@@ -81,6 +82,7 @@ export PKG=(
   pulseaudio-bluetooth
   alsa-utils
   grive
+  redshift
 
   # coding
   python
@@ -96,7 +98,6 @@ export PKG=(
 #    streamlink
 #  diff-so-fancy
 #  diffpdf
-#  redshift
 #  zeal-git
 #  odt2txt
 #  zathura-pdf-mupdf
