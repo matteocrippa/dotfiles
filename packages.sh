@@ -59,6 +59,7 @@ export PKG=(
   franz
   blueman
   arandr
+  pcmanfm
 
   # system
   bind-tools
@@ -91,7 +92,7 @@ export PKG=(
   nodejs
 
 
-#    pcmanfm
+#
 #    mupdf
 #    remmina
 #    sxhkd
