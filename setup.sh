@@ -57,12 +57,12 @@ EOF
 # NvMe
 echo_info "LVM + Formatting NVMe"
 sudo cryptsetup luksFormat ${NVME}2
-sudo cryptsetup open --type luks ${NVME}2 nvme
+sudo cryptsetup open --type luks ${NVME}p2 nvme
 sudo pvcreate /dev/mapper/nvme
 sudo vgcreate nvme_group /dev/mapper/nvme
 sudo lvcreate -L${SWAP} nvme_group -n swap
 sudo lvcreate -l 100%FREE nvme_group -n root
-sudo mkfs.fat ${NVME}1
+sudo mkfs.fat ${NVME}p1
 sudo mkfs.ext4 /dev/mapper/nvme_group-root
 sudo mkswap /dev/mapper/nvme_group-swap
 
