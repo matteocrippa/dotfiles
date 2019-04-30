@@ -1,15 +1,5 @@
 #!/bin/bash
 
-export DESKTOP=(
-  xorg-server
-  xorg-xinit
-  xorg-xrandr
-  xf86-video-intel
-  i3
-  i3lock
-  polybar
-)
-
 export PKG=(
   # AUR
   yay
@@ -23,7 +13,6 @@ export PKG=(
   polybar
   nitrogen
   rofi
-  dmenu
   dunst
   betterlockscreen
 
@@ -87,6 +76,9 @@ export PKG=(
   grive
   redshift
   rsync
+  asdf
+  compton
+  termite
 
   # coding
   python

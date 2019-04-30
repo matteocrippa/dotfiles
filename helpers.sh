@@ -19,10 +19,10 @@ function echo_info() {
 function _update() {
   if [[ $1 != "system" ]]; then
     echo_info "Updating system packages..."
-    sudo "$PKGMN" "$PKGU" "${PKGOPT[@]}"
+    "$PKGMN" "$PKGU" "${PKGOPT[@]}"
   else
     echo_info "Updating ${1}..."
-    sudo "$PKGMN" "$PKGI" "$1"
+    "$PKGMN" "$PKGI" "$1"
   fi
 }
 

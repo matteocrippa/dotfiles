@@ -26,26 +26,19 @@ font xft:Hack NF Regular 12
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# Aplications
+# Apps
+
+bindsym $mod+Return   exec termite -e 'tmux'
+bindsym $mod+space    exec rofi -show combi
+bindsyn $mod+x        exec ranger
+
 bindsym $mod+e        exec pcmanfm
 bindsym $mod+i        exec manjaro-settings-manager
-bindsym $mod+Ctrl+b   exec terminal -e 'bmenu'
-bindsym $mod+F1       exec mupdf /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+F2       exec google-chrome-stable
-bindsym $mod+F3       exec ranger
-bindsym $mod+F5       exec terminal -e 'mocp'
+
 bindsym $mod+Ctrl+t   exec compton -b
 bindsym $mod+Ctrl+m   exec termite -e 'alsamixer'
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+# bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
-
-# start a terminal
-bindsym $mod+Return exec termite
-
-# start a terminal with tmux
-bindsym $mod+Shift+Return exec termite -e 'tmux'
-
-bindsym $mod+Shift+t exec terminology
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -59,27 +52,20 @@ bindsym $mod+Shift+r restart
 # lock screen
 bindsym $mod+Escape exec --no-startup-id betterlockscreen -l dim
 
-# start program launcher
-bindsym Mod1+space exec --no-startup-id rofi -show combi
-#bindsym $mod+d exec --no-startup-id dmenu_recency
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
-
 # Printscreen
 bindsym Print                      exec --no-startup-id i3-scrot
 bindsym $mod+Print       --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
 # Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86MicMute exec --no-startup-id pactl set-source-mute 0 toggle # mute mic
 
 # Sreen brightness controls
-# bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-# bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec ~/.dotfiles/i3/toggletouchpad.sh # toggle touchpad
@@ -95,24 +81,12 @@ bindsym XF86AudioPrev  exec playerctl previous
 ###############################################################################
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left  focus left
 bindsym $mod+Down  focus down
 bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left  move left
 bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
@@ -163,16 +137,16 @@ bindsym $mod+Ctrl+Left workspace prev
 ###############################################################################
 
 # Workspace names
-set $ws1   "1:  Slack"
-set $ws2   "2:  Terminal"
-set $ws3   "3:  Web"
-set $ws4   "4: "
-set $ws5   "5:  Terminal"
-set $ws6   "6:  IntelliJ"
-set $ws7   "7: "
-set $ws8   "8:  Code"
-set $ws9   "9: "
-set $ws10 "10:  Spotify"
+set $ws1   "1: Mail"
+set $ws2   "2: Terminal"
+set $ws3   "3: Web"
+set $ws4   "4: IntelliJ"
+set $ws5   "5: Android"
+set $ws6   "6: Virtualbox"
+set $ws7   "7: "
+set $ws8   "8: "
+set $ws9   "9: "
+set $ws10   "9: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -211,10 +185,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9;  workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
-assign [class="Slack"]           $ws1
-assign [class="Firefox"]   $ws3
-# assign [class="Trello"]          $ws4
-assign [class="jetbrains-idea"]  $ws6
+assign [class="Mailspring"]           $ws1
+assign [class="Firefox"]   $ws2
+assign [class="jetbrains-idea"]  $ws4
 assign [class="code-oss"]        $ws8
 assign [class="Franz"]           $ws9
 assign [class="Spotify"]         $ws10
@@ -333,38 +306,6 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-## Start i3bar to display a workspace bar (plus the system information i3status if available)
-#bar {
-#	i3bar_command i3bar
-#	status_command i3status
-#	position bottom
-
-### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-##	tray_output primary
-##	tray_output eDP1
-
-#	bindsym button4 nop
-#	bindsym button5 nop
-##   font xft:URWGothic-Book 11
-#	strip_workspace_numbers yes
-
-#    colors {
-#        background #202A2E
-#        statusline #F9FAF9
-#        separator  #454947
-
-##                      border  backgr. text
-#        focused_workspace  #F9FAF9 #16a085 #292F34
-#        active_workspace   #595B5B #353836 #FDF6E3
-#        inactive_workspace #595B5B #202A2E #EEE8D5
-#        binding_mode       #16a085 #2C2C2C #F9FAF9
-#        urgent_workspace   #16a085 #FDF6E3 #E5201D
-#    }
-#}
-
-# hide/unhide i3status bar
-#bindsym $mod+m bar mode toggle
-
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
   client.focused          #556064 #556064 #80FFF9 #FDF6E3
@@ -436,7 +377,6 @@ mode "$mode_gaps_outer" {
 ###############################################################################
 
 # Autostart applications
-# exec --no-startup-id albert
 exec --no-startup-id mailspring
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l 41:-8 -t 5700:3600
@@ -448,7 +388,7 @@ exec --no-startup-id xautolock -time 10 -locker betterlockscreen -l dim
 exec chmod go-w ~/.dotfiles/haskell/ghci
 
 exec_always --no-startup-id ~/.spells/polybarlaunch.sh
-exec_always --no-startup-id ~/.spells/chooseWallpaper.sh
+exec_always --no-startup-id ~/.spells/chooseWallpaperExtra.sh
 
 exec xrandr --output HDMI1 --auto --right-of eDP1
 
