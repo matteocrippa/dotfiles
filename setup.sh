@@ -56,7 +56,7 @@ EOF
 
 # NvMe
 echo_info "LVM + Formatting NVMe"
-sudo cryptsetup luksFormat ${NVME}2
+sudo cryptsetup luksFormat ${NVME}p2
 sudo cryptsetup open --type luks ${NVME}p2 nvme
 sudo pvcreate /dev/mapper/nvme
 sudo vgcreate nvme_group /dev/mapper/nvme
