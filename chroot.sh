@@ -5,7 +5,7 @@
 
 echo_info "Prepare keyfile"
 sudo mv /keyfile /root/keyfile
-export PART_ID=$(blkid -o value -s UUID ${SSD}p1)
+export PART_ID=$(blkid -o value -s UUID ${SSD}1)
 sudo echo "ssd UUID=${PART_ID} /root/keyfile luks" >> /etc/crypttab
 
 touch /boot/loader/entries/manjaro.conf
