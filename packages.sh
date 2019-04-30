@@ -38,6 +38,7 @@ export PKG=(
   feh
   playerctl
   neovim
+  sc
 
   # apps x
   firefox
@@ -60,6 +61,7 @@ export PKG=(
   blueman
   arandr
   pcmanfm
+  luckybackup
 
   # system
   bind-tools
@@ -84,6 +86,7 @@ export PKG=(
   alsa-utils
   grive
   redshift
+  rsync
 
   # coding
   python
