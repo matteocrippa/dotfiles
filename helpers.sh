@@ -37,26 +37,6 @@ function _install() {
       fi
       echo_done "${pkg} installed!"
     done
-  elif [[ $1 == "lenovo" ]]; then
-    for pkg in "${LENOVO[@]}"; do
-      echo_info "Installing ${pkg}..."
-      if ! [ -x "$(command -v rainbow)" ]; then
-        sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      else
-        rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      fi
-      echo_done "${pkg} installed!"
-    done
-  elif [[ $1 == "desktop" ]]; then
-    for pkg in "${DESKTOP[@]}"; do
-      echo_info "Installing ${pkg}..."
-      if ! [ -x "$(command -v rainbow)" ]; then
-        sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      else
-        rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      fi
-      echo_done "${pkg} installed!"
-    done
   else
     echo_info "Intalling ${1}..."
     sudo "$PKGMN" "$PKGI" "$1"
