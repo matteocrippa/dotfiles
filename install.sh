@@ -15,6 +15,10 @@ sudo systemctl start lenovo_fix
 echo_info "Enable disk trimming"
 sudo systemctl enable fstrim.timer
 
+echo_info "Enable bluetooth"
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
 # Install displaylink
 echo_info "Installing displaylink..."
 yay -Sy linux51-headers
@@ -27,7 +31,7 @@ echo_info "Installing core packages..."
 _install core
 
 echo_info "Force update all the system"
-sudo pacman -Syyu
+yay -Syyu
 
 echo_info "Force remove unused apps"
 yay -Rs palemoon-bin
