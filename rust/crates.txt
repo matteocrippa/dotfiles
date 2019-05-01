@@ -1,5 +1,0 @@
-bat
-exa
-fd-find
-hyperfine
-ripgrep
