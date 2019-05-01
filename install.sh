@@ -21,3 +21,17 @@ _install core
 
 echo_info "Force update all the system"
 sudo pacman -Syyu
+
+echo_info "Prepare directories"
+mkdir -p ~/Work/Repositories/
+mkdir -p ~/Work/Material/
+mkdir -p ~/GDrive
+
+echo_info "Setup Google Drive"
+export GDRIVE_DIR="GDrive"
+cd ~/${GDRIVE_DIR}
+grive -a
+systemctl --user enable grive-timer@$(systemd-escape ${GDRIVE_DIR}).timer
+systemctl --user start grive-timer@$(systemd-escape ${GDRIVE_DIR}).timer
+systemctl --user enable grive-changes@$(systemd-escape ${GDRIVE_DIR}).service
+systemctl --user start grive-changes@$(systemd-escape ${GDRIVE_DIR}).service
