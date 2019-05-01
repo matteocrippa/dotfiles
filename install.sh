@@ -15,12 +15,21 @@ sudo systemctl start lenovo_fix
 echo_info "Enable disk trimming"
 sudo systemctl enable fstrim.timer
 
+# Install displaylink
+echo_info "Installing displaylink..."
+yay -Sy displaylink
+sudo systemctl enable displaylink.service
+sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
+
 # Install packages in the official repositories
 echo_info "Installing core packages..."
 _install core
 
 echo_info "Force update all the system"
 sudo pacman -Syyu
+
+echo_info "Force remove unused apps"
+yay -Rs palemoon-bin
 
 echo_info "Prepare directories"
 mkdir -p ~/Work/Repositories/

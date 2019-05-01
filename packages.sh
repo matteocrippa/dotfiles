@@ -7,6 +7,7 @@ export PKG=(
   xf86-input-libinput
 
   # desktop
+  i3-gaps
   polybar
   nitrogen
   rofi

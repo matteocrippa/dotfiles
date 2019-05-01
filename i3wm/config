@@ -112,9 +112,6 @@ bindsym $mod+f fullscreen toggle
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
@@ -143,10 +140,10 @@ set $ws3   "3: Web"
 set $ws4   "4: IntelliJ"
 set $ws5   "5: Android"
 set $ws6   "6: Virtualbox"
-set $ws7   "7: "
-set $ws8   "8: "
-set $ws9   "9: "
-set $ws10   "9: "
+set $ws7   "7"
+set $ws8   "8"
+set $ws9   "9"
+set $ws10  "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -221,9 +218,6 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-
-# Change border pixel for specific aplications
-for_window [class="albert"] border pixel 0
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -382,7 +376,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
-
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id xautolock -time 10 -locker betterlockscreen -l dim
 exec chmod go-w ~/.dotfiles/haskell/ghci
