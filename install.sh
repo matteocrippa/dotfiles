@@ -17,6 +17,7 @@ sudo systemctl enable fstrim.timer
 
 # Install displaylink
 echo_info "Installing displaylink..."
+yay -Sy linux51-headers
 yay -Sy displaylink
 sudo systemctl enable displaylink.service
 sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
