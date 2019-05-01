@@ -39,36 +39,19 @@ exit
 reboot
 ```
 
-Continue now
-
-
-
-Once the prompt is finished, you are _chrooted_ in your env, so proceed with:
+On restart proceed with installing apps
 
 ```jshelllanguage
-sudo pacman -Sy make git
-cd /tmp
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-cd dotfiles
-make chroot
-mv /keyfile /root/keyfile
-exit
-umount -R /mnt
-reboot
+cd dotfiles 
+make install
 ```
 
-On restart proceed with
+(optional) install UI customization
 
 ```jshelllanguage
-pacman -Sy sudo
-useradd -m -G wheel -s /bin/bash matteo
-passwd matteo
-visudo # uncomment wheel group
-exit # login as user
-git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-chmod +x *.sh
-make install
+cd ~/.dotfiles 
+make ui
 ```
 
 ## Uninstall

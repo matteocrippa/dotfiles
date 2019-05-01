@@ -1,9 +1,6 @@
 #!/bin/bash
 
 export PKG=(
-  # AUR
-  yay
-
   # drivers
   acpi
   numlockx
@@ -85,22 +82,4 @@ export PKG=(
   python-pip
   go
   nodejs
-
-
-#
-#    mupdf
-#    remmina
-#    sxhkd
-#    streamlink
-#  diff-so-fancy
-#  diffpdf
-#  zeal-git
-#  odt2txt
-#  zathura-pdf-mupdf
-#  z-dir-jump-git
-
-)
-
-export LENOVO=(
-  lenovo-throttling-fix-git
 )
