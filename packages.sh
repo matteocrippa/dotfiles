@@ -33,7 +33,7 @@ export PKG=(
   android-studio
   intellij-idea-ultimate-edition
   virtualbox
-  docker-git
+  docker
   kitematic
   enpass-bin
   mailspring
