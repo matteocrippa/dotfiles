@@ -24,3 +24,5 @@ wget -O ~/Downloads/fonts/fontawesome.zip \
   https://use.fontawesome.com/releases/v5.7.1/fontawesome-free-5.7.1-desktop.zip
 
 sudo cp ~/.dotfiles/config/50-noto-color-emoji.conf /etc/fonts/conf.d/
+
+yay -Sy ttf-hack
