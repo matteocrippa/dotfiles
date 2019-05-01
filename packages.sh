@@ -71,7 +71,8 @@ export PKG=(
   pulseaudio
   pulseaudio-bluetooth
   alsa-utils
-  grive
+  grive-git
+  inotify-tools
   redshift
   rsync
   asdf
