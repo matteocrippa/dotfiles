@@ -324,7 +324,7 @@ gaps outer 10
 # gaps inner|outer current|all set|plus|minus <px>
 # gaps inner all set 10
 # gaps outer all plus 5
-
+#
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
