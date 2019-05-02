@@ -13,6 +13,7 @@ export PKG=(
   rofi
   dunst
   betterlockscreen
+  xautolock
 
   # utils
   unzip

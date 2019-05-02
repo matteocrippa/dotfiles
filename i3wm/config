@@ -50,7 +50,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # lock screen
-bindsym $mod+Escape exec --no-startup-id betterlockscreen -l dim
+bindsym $mod+Esc exec --no-startup-id betterlockscreen -l dim
 
 # Printscreen
 bindsym Print                      exec --no-startup-id i3-scrot
@@ -188,7 +188,6 @@ assign [class="jetbrains-idea"]  $ws4
 assign [class="android-studio"]        $ws4
 assign [class="Franz"]           $ws2
 assign [class="Enpass"]         $ws10
-#for_window [class="Spotify"] move to workspace $ws10
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -379,7 +378,7 @@ exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id xautolock -time 10 -locker betterlockscreen -l dim
+exec --no-startup-id ~/.spells/autolock.sh
 exec chmod go-w ~/.dotfiles/haskell/ghci
 
 exec_always --no-startup-id ~/.spells/polybarlaunch.sh
