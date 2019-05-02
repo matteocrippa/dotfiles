@@ -14,4 +14,7 @@ git clone https://aur.archlinux.org/spaceship-prompt-git.git /tmp/spaceship-prom
 cd /tmp/spaceship-prompt-git
 makepkg -si
 
+echo "autoload -U promptinit; promptinit" >> ~/.zshrc
+echo "prompt spaceship" >> ~/.zshrc
+
 echo_done "ZSH configuration!"
