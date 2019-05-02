@@ -79,6 +79,7 @@ export PKG=(
   asdf
   compton
   termite
+  geoclue
 
   # coding
   python
