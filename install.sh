@@ -21,9 +21,17 @@ sudo systemctl start bluetooth
 
 # Install displaylink
 echo_info "Installing displaylink..."
-ysy -Sy evd-git linux51-headers displaylink
+ysy -Sy evid-git linux51-headers displaylink
 sudo systemctl enable displaylink.service
 sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
+
+# Setup extra keys
+sudo echo "evdev:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*" > /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
+sudo echo "KEYBOARD_KEY_45=prog1" >> /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
+sudo echo "KEYBOARD_KEY_49=prog2" >> /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
+sudo udevadm hwdb --update
+sudo udevadm trigger --sysname-match="event*"
+# "XF86Launch2" (KEY_KEYBOARD) and "XF86Launch1" (KEY_FAVORITES)
 
 # Install packages in the official repositories
 echo_info "Installing core packages..."
