@@ -4,6 +4,9 @@
 setup:
 	@./setup.sh
 
+ui:
+	@./ui.sh
+	
 chroot:
 	@./chroot.sh
 
