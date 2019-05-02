@@ -13,3 +13,4 @@ ln -sfT ~/.dotfiles/config/libinput-getstures.conf ~/.config/libinput-gestures.c
 
 yay -Sy nerd-fonts-complete
 yay -Sy ttf-font-awesome
+yay -Sy noto-fonts-emoji
