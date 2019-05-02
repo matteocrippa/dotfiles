@@ -9,10 +9,7 @@ echo_info "Symling .profile..."
 ln -sfT ~/.dotfiles/config/profile ~/.profile
 
 echo_info "Symlink libinput..."
-ls -sfT ~/.dotfiles/config/libinput-getstures.conf ~/.config/libinput-gestures.conf
-
-echo_info "Downloading fonts..."
-wget -O ~/Downloads/fonts/fontawesome.zip \
-  https://use.fontawesome.com/releases/v5.7.1/fontawesome-free-5.7.1-desktop.zip
+ln -sfT ~/.dotfiles/config/libinput-getstures.conf ~/.config/libinput-gestures.conf
 
 yay -Sy nerd-fonts-complete
+yay -Sy ttf-font-awesome
