@@ -1,4 +1,4 @@
-##!/bin/bash
+#!/bin/bash
 
 # shellcheck source=distro.sh
 . ../distro.sh
