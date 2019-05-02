@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Hack NF Regular 12
+font xft:Hack Nerd Font Regular 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -135,7 +135,7 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
 set $ws1   "1: Mail"
-set $ws2   "2: Messagin"
+set $ws2   "2: IM"
 set $ws3   "3: Web"
 set $ws4   "4: Coding"
 set $ws5   "5: VM"
