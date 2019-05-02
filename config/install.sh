@@ -25,4 +25,4 @@ wget -O ~/Downloads/fonts/fontawesome.zip \
 
 sudo cp ~/.dotfiles/config/50-noto-color-emoji.conf /etc/fonts/conf.d/
 
-yay -Sy ttf-hack
+yay -Sy nerd-fonts-complete
