@@ -30,12 +30,7 @@ floating_modifier $mod
 
 bindsym $mod+Return   exec termite -e 'tmux'
 bindsym $mod+space    exec rofi -show combi
-bindsyn $mod+x        exec ranger
 
-bindsym $mod+e        exec pcmanfm
-bindsym $mod+i        exec manjaro-settings-manager
-
-bindsym $mod+Ctrl+t   exec compton -b
 bindsym $mod+Ctrl+m   exec termite -e 'alsamixer'
 # bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
