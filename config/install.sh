@@ -12,6 +12,8 @@ echo_info "Enable gestures..."
 yay -Sy libinput-gestures
 sudo gpasswd -a $USER input
 ln -sfT ~/.dotfiles/config/libinput-gestures.conf ~/.config/libinput-gestures.conf
+libinput-gestures-setup autostart 
+libinput-gestures-setup start
 
 yay -Sy nerd-fonts-complete
 yay -Sy ttf-font-awesome
