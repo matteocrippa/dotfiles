@@ -34,6 +34,7 @@ export PKG=(
   android-studio
   intellij-idea-ultimate-edition
   virtualbox
+  virtualbox-ext-oracle
   docker
   kitematic
   enpass-bin
