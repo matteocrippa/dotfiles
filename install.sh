@@ -20,7 +20,7 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 echo_info "Active remote ntp time"
-sudo systemctl enabl systemd-timesyncd
+sudo systemctl enable systemd-timesyncd
 sudo systemctl start systemd-timesyncd
 
 # Install displaylink
