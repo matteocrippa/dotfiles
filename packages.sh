@@ -80,6 +80,7 @@ export PKG=(
   compton
   termite
   geoclue
+  xorg-xbacklight
 
   # coding
   python
