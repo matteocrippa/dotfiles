@@ -374,15 +374,12 @@ exec --no-startup-id ~/.spells/autolock.sh
 exec chmod go-w ~/.dotfiles/haskell/ghci
 
 exec_always --no-startup-id ~/.spells/polybarlaunch.sh
-exec_always --no-startup-id ~/.spells/chooseWallpaper.sh
+exec --no-startup-id ~/.spells/chooseWallpaper.sh
 
 exec xrandr --output HDMI1 --auto --right-of eDP1
 
 # Keyboard Remaps
 exec --no-startup-id numlockx on
-#exec --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id xcape -e 'Control_L=Escape'
 
 # Natural Scroll
 exec_always --no-startup-id ~/.spells/naturalScrollOn.sh
