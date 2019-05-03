@@ -64,8 +64,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MicMute exec --no-startup-id pactl set-source-mute 0 toggle # mute mic
 
 # Sreen brightness controls
-bindsym XF86KbdBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86KbdBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
