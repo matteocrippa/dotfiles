@@ -50,6 +50,7 @@ export PKG=(
   arandr
   pcmanfm
   luckybackup
+  manjaro-settings-manager
 
   # system
   bind-tools
