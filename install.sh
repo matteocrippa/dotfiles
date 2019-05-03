@@ -19,9 +19,13 @@ echo_info "Enable bluetooth"
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+echo_info "Active remote ntp time"
+sudo systemctl enabl systemd-timesyncd
+sudo systemctl start systemd-timesyncd
+
 # Install displaylink
 echo_info "Installing displaylink..."
-ysy -Sy evid-git linux51-headers displaylink
+ysy -Sy evid-git linux-rt-lts-headers displaylink
 sudo systemctl enable displaylink.service
 sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
 
