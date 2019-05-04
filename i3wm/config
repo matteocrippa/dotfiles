@@ -213,7 +213,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating assign
 for_window [class="(?i)virtualbox"] floating disable
 for_window [class="Xfburn"] floating enable
-for_window [class="Enpass"] floating enable
+#for_window [class="Enpass"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -372,6 +372,7 @@ exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
 exec --no-startup-id ~/.spells/autolock.sh
+exec --no-startup-id ~/.spells/autosuspend.sh
 exec chmod go-w ~/.dotfiles/haskell/ghci
 
 exec_always --no-startup-id ~/.spells/polybarlaunch.sh
