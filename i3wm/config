@@ -178,11 +178,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
 assign [class="Mailspring"]           $ws1
+assign [class="Franz"]           $ws2
 assign [class="Firefox"]   $ws3
 assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws4
-assign [class="Franz"]           $ws2
-assign [class="Enpass"]         $ws10
+assign [class="(?i)virtualbox"]           $ws5
+#assign [class="Enpass"]         $ws10
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -208,9 +209,10 @@ for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
-for_window [class="Timeset-gui"] floating enable border normal
-#for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Timeset-gui"] floating assign
+#for_window [class="(?i)virtualbox"] tiling enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Enpass"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
