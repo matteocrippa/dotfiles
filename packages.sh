@@ -39,7 +39,7 @@ export PKG=(
   kitematic
   enpass-bin
   mailspring
-  evernote
+  tusk 
   gitahead
   charles
   clockify-desktop
