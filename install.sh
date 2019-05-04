@@ -60,3 +60,6 @@ systemctl --user enable grive-timer@$(systemd-escape ${GDRIVE_DIR}).timer
 systemctl --user start grive-timer@$(systemd-escape ${GDRIVE_DIR}).timer
 systemctl --user enable grive-changes@$(systemd-escape ${GDRIVE_DIR}).service
 systemctl --user start grive-changes@$(systemd-escape ${GDRIVE_DIR}).service
+
+echo_info "Setup scanner"
+sudo brsaneconfig4 -a name="Brother" model="DCP1610W" ip=192.168.0.16

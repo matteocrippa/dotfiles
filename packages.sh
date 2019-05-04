@@ -5,6 +5,10 @@ export PKG=(
   acpi
   numlockx
   xf86-input-libinput
+  sane
+  brother-dcp1610w
+  cups
+  brscan4
 
   # desktop
   i3-gaps
@@ -53,6 +57,7 @@ export PKG=(
   luckybackup
   manjaro-settings-manager
   kapow
+  simple-scan-git
 
   # system
   bind-tools
