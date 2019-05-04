@@ -369,7 +369,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id volumeicon
 exec --no-startup-id clipit
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id ~/.spells/autolock.sh
 exec chmod go-w ~/.dotfiles/haskell/ghci
 
@@ -380,6 +379,7 @@ exec xrandr --output HDMI1 --auto --right-of eDP1
 
 # Keyboard Remaps
 exec --no-startup-id numlockx on
+exec --no-startup-id libinput-gestures-autostart
 
 # Natural Scroll
 exec_always --no-startup-id ~/.spells/naturalScrollOn.sh
