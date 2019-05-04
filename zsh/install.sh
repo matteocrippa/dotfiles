@@ -17,4 +17,6 @@ makepkg -si
 echo "autoload -U promptinit; promptinit" >> ~/.zshrc
 echo "prompt spaceship" >> ~/.zshrc
 
+echo "alias vi=nvim" >> ~/.zshrc
+
 echo_done "ZSH configuration!"
