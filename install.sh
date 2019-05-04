@@ -63,3 +63,10 @@ systemctl --user start grive-changes@$(systemd-escape ${GDRIVE_DIR}).service
 
 echo_info "Setup scanner"
 sudo brsaneconfig4 -a name="Brother" model="DCP1610W" ip=192.168.0.16
+
+echo_info "Setup MacOS VM"
+yay -Sy dmg2img
+cd /tmp
+git clone https://github.com/matteocrippa/macos-guest-virtualbox.git
+cd macos-guest-virtualbo
+./macos-guest-virtualbox.sh
