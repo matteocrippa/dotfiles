@@ -131,10 +131,10 @@ bindsym $mod+Ctrl+Left workspace prev
 # Workspace names
 set $ws1   "1: Mail"
 set $ws2   "2: IM"
-set $ws3   "3: Web"
-set $ws4   "4: Coding"
-set $ws5   "5: VM"
-set $ws6   "6"
+set $ws3   "3: PM"
+set $ws4   "4: Web"
+set $ws5   "5: Coding"
+set $ws6   "6: VM"
 set $ws7   "7"
 set $ws8   "8"
 set $ws9   "9"
@@ -179,11 +179,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # Open applications on specific workspaces
 assign [class="Mailspring"]           $ws1
 assign [class="Franz"]           $ws2
-assign [class="Firefox"]   $ws3
-assign [class="jetbrains-idea"]  $ws4
-assign [class="jetbrains-studio"] $ws4
-assign [class="(?i)virtualbox"]           $ws5
-#assign [class="Enpass"]         $ws10
+assign [class="(?i)Kapow"]  $ws3
+assign [class="Firefox"]   $ws4
+assign [class="jetbrains-idea"]  $ws5
+assign [class="jetbrains-studio"] $ws5
+assign [class="(?i)virtualbox"]           $ws6
+assign [class="Enpass"]         $ws10
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

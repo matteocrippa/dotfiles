@@ -39,7 +39,7 @@ export PKG=(
   kitematic
   enpass-bin
   mailspring
-  tusk 
+  tusk
   gitahead
   charles
   clockify-desktop
@@ -52,6 +52,7 @@ export PKG=(
   pcmanfm
   luckybackup
   manjaro-settings-manager
+  kapow
 
   # system
   bind-tools
