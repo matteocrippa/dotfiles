@@ -376,7 +376,7 @@ exec_always --no-startup-id ~/.spells/polybarlaunch.sh
 exec --no-startup-id ~/.spells/chooseWallpaper.sh
 
 exec xrandr --output HDMI1 --auto --right-of eDP1
-
+exec xrandr --output DP1 --auto --left-of eDP1
 # Keyboard Remaps
 exec --no-startup-id numlockx on
 exec --no-startup-id libinput-gestures-autostart
