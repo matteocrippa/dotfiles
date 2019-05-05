@@ -5,11 +5,7 @@ export PKG=(
   acpi
   numlockx
   xf86-input-libinput
-  sane
-  brother-dcp1610w
-  cups
-  brscan4
-
+  
   # desktop
   i3-gaps
   polybar
@@ -28,7 +24,6 @@ export PKG=(
   ranger
   git
   feh
-  playerctl
   neovim
   sc
 
@@ -37,8 +32,6 @@ export PKG=(
   clipit
   android-studio
   intellij-idea-ultimate-edition
-  virtualbox
-  virtualbox-ext-oracle
   docker
   kitematic
   enpass-bin
@@ -46,7 +39,6 @@ export PKG=(
   tusk
   gitahead
   charles
-  clockify-desktop
   postman
   vlc
   wireshark-qt
@@ -57,7 +49,6 @@ export PKG=(
   luckybackup
   manjaro-settings-manager
   kapow
-  simple-scan-git
 
   # system
   bind-tools
