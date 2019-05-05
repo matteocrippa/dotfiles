@@ -1,5 +1,5 @@
 #!/bin/bash
-yay -Sy base-devel qemu uml_utilities virt-manager dmg2img ebtables dnsmasq
+yay -Sy base-devel qemu-git uml_utilities virt-manager dmg2img ebtables dnsmasq
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 mkdir -p ~/Vm
