@@ -8,10 +8,10 @@ export PKG=(
   
   # desktop
   i3-gaps
+  polybar
   nitrogen
   rofi
   dunst
-  betterlockscreen
   xautolock
 
   # utils
