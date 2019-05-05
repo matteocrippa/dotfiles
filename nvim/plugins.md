@@ -30,14 +30,6 @@ This is where the plugins will be clone to and load from.
 call plug#begin(expand('~/.config/nvim/plugged'))
 ```
 
-### Games
-
-#### Tetris
-
-```vim
-Plug 'vim-scripts/TeTrIs.vim'
-```
-
 ### IDE like plugins
 
 ```vim
@@ -196,34 +188,6 @@ Plug 'ludwig/split-manpage.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'carlosgaldino/elixir-snippets'
 
-" Go
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-
-let g:go_fmt_command = "goimports"
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-
-" Haskell
-" Plug 'dag/vim2hs'
-Plug 'eagletmt/neco-ghc'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'pbrisbin/vim-syntax-shakespeare'
-
-"""" vim-haskell
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
-
 " HTML
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
@@ -239,9 +203,6 @@ let g:prettier#config#print_width = 40   " max line length that prettier will wr
 let g:prettier#config#tab_width = 2      " number of spaces per indentation level
 let g:prettier#config#use_tabs = 'false' " use tabs over spaces
 
-" Julia
-Plug 'JuliaEditorSupport/julia-vim'
-
 " Markdown
 Plug 'junegunn/goyo.vim' " distraction free writing
 Plug 'godlygeek/tabular'
@@ -255,18 +216,7 @@ let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_frontmatter = 1
 "" let g:vim_markdown_folding_disabled = 0
 
-" Python
-Plug 'davidhalter/jedi-vim'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-" Ruby
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-projectionist'
-Plug 'thoughtbot/vim-rspec'
-Plug 'ecomba/vim-ruby-refactoring'
 ```
-
 This is necessary in order to close where there are no more plugins to install.
 
 ```vim
