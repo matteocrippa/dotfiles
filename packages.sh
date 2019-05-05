@@ -8,7 +8,6 @@ export PKG=(
   
   # desktop
   i3-gaps
-  polybar
   nitrogen
   rofi
   dunst
@@ -59,8 +58,6 @@ export PKG=(
   tcpdump
   tcpreplay
   rxvt-unicode-terminfo
-  tmux
-  vim
   tree
   htop
   scrot
@@ -77,7 +74,6 @@ export PKG=(
   rsync
   asdf
   compton
-  termite
   geoclue
   xorg-xbacklight
 
