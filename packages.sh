@@ -5,7 +5,8 @@ export PKG=(
   acpi
   numlockx
   xf86-input-libinput
-  
+  laptop-mode-tools
+
   # desktop
   i3-gaps
   polybar

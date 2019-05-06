@@ -34,8 +34,8 @@ echo_info "Activate libvirtual"
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 
-echo_info "Activate auto suspend"
-sudo systemctl enable tlp-sleep.service
+echo_info "Activate laptop-mode"
+sudo systemctl enable laptop-mode.service
 
 # Install displaylink
 #echo_info "Installing displaylink..."
