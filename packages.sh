@@ -6,6 +6,9 @@ export PKG=(
   numlockx
   xf86-input-libinput
   laptop-mode-tools
+  thermald
+  tlp
+  acpi-call
 
   # desktop
   i3-gaps
@@ -77,6 +80,7 @@ export PKG=(
   compton
   geoclue
   xorg-xbacklight
+  powertop
 
   # coding
   python
