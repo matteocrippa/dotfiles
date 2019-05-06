@@ -10,6 +10,10 @@ yay -Syyu
 echo_info "Install Yay"
 sudo pacman -Sy yay
 
+# Install packages in the official repositories
+echo_info "Installing core packages..."
+_install core
+
 echo_info "Installing lenovo packages"
 yay -Sy lenovo-throttling-fix-git
 sudo systemctl enable lenovo_fix
@@ -43,10 +47,6 @@ sudo echo "KEYBOARD_KEY_49=prog2" >> /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
 sudo udevadm hwdb --update
 sudo udevadm trigger --sysname-match="event*"
 # "XF86Launch2" (KEY_KEYBOARD) and "XF86Launch1" (KEY_FAVORITES)
-
-# Install packages in the official repositories
-echo_info "Installing core packages..."
-_install core
 
 echo_info "Force remove unused apps"
 yay -Rs palemoon-bin
