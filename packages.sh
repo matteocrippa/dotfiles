@@ -51,7 +51,9 @@ export PKG=(
   pcmanfm
   luckybackup
   manjaro-settings-manager
+  manjaro-settings-samba
   kapow
+  system-config-samba
 
   # system
   bind-tools
@@ -74,7 +76,6 @@ export PKG=(
   alsa-utils
   grive-git
   inotify-tools
-  redshift
   rsync
   asdf
   compton
@@ -85,6 +86,5 @@ export PKG=(
   # coding
   python
   python-pip
-  go
   nodejs
 )

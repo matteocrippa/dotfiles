@@ -197,7 +197,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [instance="enpassx"] move to scratchpad
+for_window [class="Enpass"] move to scratchpad
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -247,7 +247,7 @@ bindsym $mod+Escape exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id mailspring
 exec --no-startup-id ripcord
-exec --no-startup-id enpass -c enpassx
+exec --no-startup-id enpass
 exec --no-startup-id kapow
 exec --no-startup-id volumeicon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -258,7 +258,6 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id redshift -l 41:-8 -t 5700:3600
 exec --no-startup-id ~/.spells/polybarlaunch.sh
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.spells/naturalScrollOn.sh
