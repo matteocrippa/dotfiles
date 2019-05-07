@@ -41,10 +41,10 @@ sudo systemctl enable tlp-slep.service
 sudo systemctl enable thermald
 
 # Install displaylink
-#echo_info "Installing displaylink..."
-#yay -Sy evdi linux-rt-lts-headers displaylink
-#sudo systemctl enable displaylink.service
-#sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
+echo_info "Installing displaylink..."
+yay -Sy evdi displaylink
+sudo systemctl enable displaylink.service
+sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
 
 # Setup extra keys
 sudo echo "evdev:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*" > /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
