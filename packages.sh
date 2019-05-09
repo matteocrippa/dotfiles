@@ -54,6 +54,9 @@ export PKG=(
   manjaro-settings-samba
   kapow
   system-config-samba
+  inkscape
+  gimp
+
 
   # system
   bind-tools
@@ -78,7 +81,6 @@ export PKG=(
   inotify-tools
   rsync
   asdf
-  compton
   geoclue
   xorg-xbacklight
   powertop
