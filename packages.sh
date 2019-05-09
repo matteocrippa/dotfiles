@@ -42,7 +42,7 @@ export PKG=(
   tusk
   gitahead
   charles
-  postman
+  postman-bin
   vlc
   wireshark-qt
   franz
