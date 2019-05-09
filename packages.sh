@@ -29,6 +29,7 @@ export PKG=(
   feh
   neovim
   sc
+  clamav
 
   # apps x
   firefox

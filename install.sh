@@ -57,6 +57,12 @@ sudo udevadm trigger --sysname-match="event*"
 echo_info "Force remove unused apps"
 yay -Rs palemoon-bin
 
+echo_info "Install antivirus"
+yay -Sy clamav
+sudo systemctl enable clamav-freshclam.service
+sudo systemctl enable clamav-daemon.service
+
+
 echo_info "Prepare directories"
 mkdir -p ~/Work/Repositories/
 mkdir -p ~/Work/Material/
