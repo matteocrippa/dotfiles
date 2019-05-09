@@ -56,8 +56,8 @@ export PKG=(
   system-config-samba
   inkscape
   gimp
-
-
+  gufw
+ 
   # system
   bind-tools
   net-tools
