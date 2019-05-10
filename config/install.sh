@@ -18,3 +18,7 @@ libinput-gestures-setup start
 yay -Sy nerd-fonts-complete
 yay -Sy ttf-font-awesome
 yay -Sy noto-fonts-emoji
+
+echo_info "Enable better battery handler for polybar"
+sudo mv ~/.spells//polybar/95-battery.rules /etc/udev/rules.d/
+
