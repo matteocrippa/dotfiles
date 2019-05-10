@@ -11,7 +11,7 @@ export PKG=(
   acpi-call
 
   # desktop
-  i3-gaps
+  i3-gaps-next-git
   polybar
   nitrogen
   rofi

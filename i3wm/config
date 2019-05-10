@@ -165,7 +165,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 # Open applications on specific workspaces
 assign [class="Mailspring"]           $ws1
 assign [class="(?i)Kapow"]  $ws3
-assign [class="Vnote"] $ws3
+assign [class="VNote"] $ws3
 assign [class="Firefox"]   $ws2
 assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws5
