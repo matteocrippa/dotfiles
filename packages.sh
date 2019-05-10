@@ -58,7 +58,8 @@ export PKG=(
   inkscape
   gimp
   gufw
- 
+  vnote
+
   # system
   bind-tools
   net-tools

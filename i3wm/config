@@ -120,8 +120,8 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 set $ws1 "1:mail"
-set $ws2 "2:time"
-set $ws3 "3:web"
+set $ws2 "2:web"
+set $ws3 "3:plan"
 set $ws4 "4:code"
 set $ws5 "5:vm"
 set $ws6 6
@@ -164,9 +164,9 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
 assign [class="Mailspring"]           $ws1
-assign [class="Ripcord"]           $ws1
-assign [class="(?i)Kapow"]  $ws2
-assign [class="Firefox"]   $ws3
+assign [class="(?i)Kapow"]  $ws3
+assign [class="Vnote"] $ws3
+assign [class="Firefox"]   $ws2
 assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws5
 assign [class="Virt-manager"]           $ws6
@@ -187,7 +187,6 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
@@ -247,6 +246,7 @@ bindsym $mod+Escape exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id mailspring
 exec --no-startup-id enpass
+exec --no-startup-id vnote
 exec --no-startup-id kapow
 exec --no-startup-id volumeicon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
