@@ -93,7 +93,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Ctrl+minus floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+Ctrl+space focus mode_toggle
@@ -163,13 +163,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
-assign [class="Mailspring"]           $ws1
+assign [class="Mailspring"] $ws1
 assign [class="(?i)Kapow"]  $ws3
 assign [class="VNote"] $ws3
-assign [class="Firefox"]   $ws2
+assign [class="Firefox"] $ws2
 assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws5
-assign [class="Virt-manager"]           $ws6
+assign [class="Virt-manager"] $ws6
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -196,7 +196,8 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title="Enpass"] move to scratchpad
+for_window [instance="Enpass"] move to scratchpad
+for_window [instance="Enpass Assitant"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
