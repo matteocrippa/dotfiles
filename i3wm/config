@@ -196,7 +196,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title"Enpass"] move to scratchpad
+for_window [title="Enpass"] move to scratchpad
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
