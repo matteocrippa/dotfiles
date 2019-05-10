@@ -5,7 +5,6 @@ export PKG=(
   acpi
   numlockx
   xf86-input-libinput
-  laptop-mode-tools
   thermald
   tlp
   acpi-call
@@ -13,7 +12,7 @@ export PKG=(
   # desktop
   i3-gaps-next-git
   polybar
-  nitrogen
+  nitrogen-git
   rofi
   dunst
   xautolock
