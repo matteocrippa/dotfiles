@@ -30,6 +30,7 @@ export PKG=(
   neovim
   sc
   clamav
+  sncli-git
 
   # apps x
   firefox
@@ -58,7 +59,6 @@ export PKG=(
   inkscape
   gimp
   gufw
-  vnote
 
   # system
   bind-tools

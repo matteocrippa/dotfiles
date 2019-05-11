@@ -60,8 +60,6 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
-# focus_follows_mouse no
-
 # change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -165,11 +163,12 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 # Open applications on specific workspaces
 assign [class="Mailspring"] $ws1
 assign [class="(?i)Kapow"]  $ws3
-assign [class="VNote"] $ws3
+assign [class="sncli"] $ws3
 assign [class="Firefox"] $ws2
 assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws5
 assign [class="Virt-manager"] $ws6
+assign [class="QEMU"] $ws6
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -247,7 +246,6 @@ bindsym $mod+Escape exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id mailspring
 exec --no-startup-id enpass
-exec --no-startup-id vnote
 exec --no-startup-id kapow
 exec --no-startup-id volumeicon
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -262,7 +260,7 @@ exec --no-startup-id ~/.spells/polybarlaunch.sh
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.spells/naturalScrollOn.sh
 exec_always --no-startup-id libinput-gestures-setup start
-
+exec --no-startup-id terminal -e 'sncli'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
