@@ -11,7 +11,8 @@ export PKG=(
 
   # desktop
   i3-gaps-next-git
-  polybar
+  polybar-git
+  compton-git
   nitrogen-git
   rofi
   dunst

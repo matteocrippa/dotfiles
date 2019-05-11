@@ -1,14 +1,9 @@
 #!/bin/bash
-yay -Sy base-devel qemu uml_utilities virt-manager dmg2img ebtables dnsmasq
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
-mkdir -p ~/Vm
-cd ~
-git clone git://github.com/kholia/OSX-KVM ~/Vm/Osx
-cd ~/Vm/Osx
-./fetch-macOS.py
-dmg2img BaseSystem.dmg BaseSystem.img
-qemu-img create -f qcow2 mac_hdd_ng.img 64G
-sed -i "s/CHANGEME/$USER/g" macOS-libvirt-NG.xml
-virsh --connect qemu:///system define macOS-libvirt-NG.xml
-virt-manager
+git clone git@github.com:foxlet/macOS-Simple-KVM.git ~/Vm/macOS
+cd ~/Vm/macOS
+./jumpstart.sh
+qemu-img create -f qcow2 MyDisk.qcow2 64G
+echo "-drive id=SystemDisk,if=none,file=MyDisk.qcow2 \\" >> basic.sh
+echo "-device ide-hd,bus=sata.4,drive=SystemDisk \\" >> basic.sh
+./basic.sh
+#./make.sh --add
