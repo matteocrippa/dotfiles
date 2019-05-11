@@ -40,6 +40,10 @@ sudo systemctl enable tlp
 sudo systemctl enable tlp-slep.service
 sudo systemctl enable thermald
 
+# add wireshark user
+echo_info "Activate wireshark"
+sudo gpasswd -a matteo wireshark
+
 # Install displaylink
 echo_info "Installing displaylink..."
 yay -Sy linux50-headers evdi displaylink
