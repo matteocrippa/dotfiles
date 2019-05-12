@@ -40,6 +40,11 @@ sudo systemctl enable tlp
 sudo systemctl enable tlp-slep.service
 sudo systemctl enable thermald
 
+# add simplenote
+echo_info "Add simplenote"
+cp ~/.dotfiles/.snclirc ~/.snclirc
+echo_info "Remeber to update the values to login"
+
 # add wireshark user
 echo_info "Activate wireshark"
 sudo gpasswd -a matteo wireshark
