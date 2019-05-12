@@ -5,8 +5,6 @@ cfg_sn_password =
 # see http://urwid.org/manual/userinput.html for examples of more key combinations
 kb_edit_note = space
 kb_page_down = ctrl f
-kb_view_next_note = down
-kb_view_prev_note = up
 # note that values must not be quoted
 clr_note_focus_bg = light blue
 
