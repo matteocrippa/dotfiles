@@ -169,6 +169,7 @@ assign [class="jetbrains-idea"]  $ws4
 assign [class="jetbrains-studio"] $ws5
 assign [class="Virt-manager"] $ws6
 assign [class="QEMU"] $ws6
+assign [class="spicy"] $ws6
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
