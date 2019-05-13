@@ -44,7 +44,7 @@ export PKG=(
   tusk
   gitahead
   charles
-  postman-bin
+  insomnia
   vlc
   wireshark-qt
   franz
