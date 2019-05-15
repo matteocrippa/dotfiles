@@ -51,7 +51,7 @@ export PKG=(
   blueman
   arandr
   pcmanfm
-  luckybackup
+  deja-dup
   manjaro-settings-manager
   manjaro-settings-samba
   kapow
