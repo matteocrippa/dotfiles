@@ -28,7 +28,6 @@ export PKG=(
   git
   feh
   neovim
-  emacs
   sc
   clamav
   sncli-git

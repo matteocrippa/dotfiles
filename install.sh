@@ -55,9 +55,6 @@ yay -Sy linux50-headers evdi displaylink
 sudo systemctl enable displaylink.service
 sudo cp ./displaylink/20-evdidevice.conf /usr/share/X11/xorg.conf.d/20-evdidevice.conf
 
-# Install spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-
 # Setup extra keys
 sudo echo "evdev:name:ThinkPad Extra Buttons:dmi:bvn*:bvr*:bd*:svnLENOVO*:pn*" > /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
 sudo echo "KEYBOARD_KEY_45=prog1" >> /etc/udev/hwdb.d/90-thinkpad-keyboard.hwdb
