@@ -9,4 +9,3 @@ alias gitu="git add . && git commit && git push"
 
 # MacOS Alias
 alias macos="sh ~/Vm/macOS/start.sh"
-
