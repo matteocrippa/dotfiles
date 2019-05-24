@@ -5,7 +5,7 @@
 # shellcheck source=helpers.sh
 . ../helpers.sh
 
-echo_info "Symling .profile..."
+echo_info "Symlink .profile..."
 ln -sfT ~/.dotfiles/config/profile ~/.profile
 
 echo_info "Enable gestures..."
