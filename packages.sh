@@ -15,6 +15,7 @@ export PKG=(
   compton-git
   nitrogen-git
   rofi
+  rofi-calc
   dunst
   xautolock
 

@@ -11,10 +11,7 @@ _install neovim
 _install python2-neovim
 _install python-neovim
 
-if [[ -x "$(command -v yaourt)" ]]; then
-  yaourt -Sy ruby-neovim --needed --noconfirm
-  yaourt -Sy nodejs-neovim --needed --noconfirm
-fi
+yay -Sy nodejs-neovim --needed --noconfirm
 
 echo_info "Installing vim-plug..."
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
