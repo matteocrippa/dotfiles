@@ -39,6 +39,7 @@ sudo cp tlp /etc/default/tlp
 sudo systemctl enable tlp
 sudo systemctl enable tlp-slep.service
 sudo systemctl enable thermald
+sudo cp 99-local.rules /etc/udev/rules.d/
 
 # add simplenote
 echo_info "Add simplenote"
