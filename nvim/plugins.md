@@ -30,6 +30,14 @@ This is where the plugins will be clone to and load from.
 call plug#begin(expand('~/.config/nvim/plugged'))
 ```
 
+## Color and Theme
+```vim
+" Color Scheme
+Plug 'mhartington/oceanic-next'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ryanoasis/vim-devicons'
+```
+
 ### IDE like plugins
 
 ```vim
@@ -169,11 +177,6 @@ let g:session_command_aliases = 1
 " vim-airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Color Scheme
-Plug 'mhartington/oceanic-next'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'ryanoasis/vim-devicons'
 ```
 
 ### Languages

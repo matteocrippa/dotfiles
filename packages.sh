@@ -87,6 +87,7 @@ export PKG=(
   geoclue
   xorg-xbacklight
   powertop
+  alacritty
 
   # coding
   python
