@@ -72,6 +72,7 @@ export PKG=(
   rxvt-unicode-terminfo
   tree
   htop
+  gtop
   scrot
   bat
   neofetch
