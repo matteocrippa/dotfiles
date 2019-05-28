@@ -259,7 +259,7 @@ exec --no-startup-id ~/.spells/polybarlaunch.sh
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.spells/naturalScrollOn.sh
 exec_always --no-startup-id libinput-gestures-setup start
-exec --no-startup-id alacritty -e 'sncli' -t 'sncli'
+exec --no-startup-id alacritty -t sncli -e sncli
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
