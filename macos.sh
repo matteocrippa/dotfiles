@@ -1,5 +1,6 @@
 #!/bin/bash
 git clone git@github.com:matteocrippa/macOS-Simple-KVM.git ~/Vm/macOS
+yay -Sy ideviceinstaller libimobiledevice
 cd ~/Vm/macOS
 ./install.sh
 ./jumpstart.sh
