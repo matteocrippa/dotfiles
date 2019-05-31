@@ -60,6 +60,7 @@ export PKG=(
   inkscape
   gimp
   gufw
+  pdfsam
 
   # system
   bind-tools
