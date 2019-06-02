@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone git@github.com:matteocrippa/macOS-Simple-KVM.git ~/Vm/macOS
+git clone git@github.com:matteocrippa/macos-kvm.git ~/Vm/macOS
 cd ~/Vm/macOS
 ./install.sh
 ./jumpstart.sh
