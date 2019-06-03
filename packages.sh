@@ -95,4 +95,5 @@ export PKG=(
   python
   python-pip
   nodejs
+  flutter
 )
