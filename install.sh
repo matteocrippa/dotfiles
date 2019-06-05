@@ -65,7 +65,7 @@ sudo udevadm trigger --sysname-match="event*"
 # "XF86Launch2" (KEY_KEYBOARD) and "XF86Launch1" (KEY_FAVORITES)
 
 echo_info "Force remove unused apps"
-yay -Rs palemoon-bin
+yay -Rs palemoon-bin usbmuxd
 
 echo_info "Install antivirus"
 yay -Sy clamav

@@ -90,6 +90,7 @@ export PKG=(
   xorg-xbacklight
   powertop
   alacritty
+  xscreensaver
 
   # coding
   python
