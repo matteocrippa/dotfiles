@@ -43,16 +43,18 @@ On restart proceed with installing apps
 
 ```jshelllanguage
 git clone https://github.com/matteocrippa/dotfiles ~/.dotfiles
-cd dotfiles 
+cd dotfiles
 make install
 ```
 
 (optional) install UI customization
 
 ```jshelllanguage
-cd ~/.dotfiles 
+cd ~/.dotfiles
 make ui
 ```
+
+Last stuff run `screensaver` to set idle, suspend time
 
 ## Uninstall
 
