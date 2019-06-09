@@ -35,7 +35,7 @@ sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 
 echo_info "Activate laptop-mode"
-sudo cp tlp /etc/default/tlp
+sudo ln -sfT ~/.dotfiles/tlp /etc/default/tlp
 sudo systemctl enable tlp
 sudo systemctl enable tlp-slep.service
 sudo systemctl enable thermald
